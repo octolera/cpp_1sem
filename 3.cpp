@@ -111,7 +111,7 @@ class P3: public P21, public P11 {
 private:
     char *description = new char[1000];
 public:
-    P3(const char title[], const char auth[], const char genre[], int len, float rating,const char desc[]) : P21(title, auth, genre), P11(title, len, rating) {
+    P3(const char title[], const char auth[], const char genre[], int len, float rating,const char desc[]) : P21(title, auth, genre), P11(title, len, rating), Book(title) {
         strcpy_s(description, 1000,  desc);
     }
     ~P3() {
